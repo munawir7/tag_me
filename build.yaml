@@ -1,0 +1,10 @@
+targets:
+  $default:
+    builders:
+      json_serializable:
+        options:
+          # JSON only lives in data-layer DTOs, which mirror the API:
+          # snake_case keys, nested DTOs serialised fully.
+          field_rename: snake
+          explicit_to_json: true
+          include_if_null: false
